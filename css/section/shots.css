@@ -1,0 +1,59 @@
+.shots-bg {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(252, 82, 82, 0.05) 0%, 
+        rgba(252, 82, 82, 0) 100%);
+}
+
+.shots__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 130%;
+    color: var(--dark-color);
+
+    padding-left: 375px;
+    padding-top: 160px;
+}
+
+.shots__list {
+    margin-top: 60px;
+    margin-bottom: 88px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.shots__card:first-child .shots__card-img {
+    opacity: 0.3;
+}
+
+.shots__card:last-child .shots__card-img {
+    opacity: 0.3;
+}
+
+
+.shots__card-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 24px;
+}
+
+.shots__card-number {
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--dark-color);
+}
+
+.shots__card-number::before {
+    content: url(../../img/heart.svg);
+    position: relative;
+    padding-right: 10px;
+    top: 3px;
+}
+
+.shots__card-text {
+    color: var(--dark-color);
+}

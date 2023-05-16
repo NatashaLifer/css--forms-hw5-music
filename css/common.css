@@ -1,0 +1,19 @@
+:root {
+    --main-color: #FFFFFF;
+    --dark-color: #222222;
+    --main-bg-color: #381DDB;
+}
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
