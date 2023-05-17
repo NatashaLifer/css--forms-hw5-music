@@ -155,8 +155,11 @@
     line-height: 24px;
     color: var(--dark-color);
     font-family: 'Raleway', sans-serif;
-    
+
     width: 100%;
+
+    resize: none;
+
     background-color: rgba(34, 34, 34, 0.001);
     border-right: none;
     border-left: none;
