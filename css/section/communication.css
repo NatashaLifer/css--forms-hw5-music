@@ -178,6 +178,15 @@
     background-color: var(--main-bg-color);
     border-radius: 8px;
     border: none;
+
+    outline: 2px solid transparent;
+    transition: outline 0.5s;
+}
+
+.customers__btn:hover {
+    outline: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
 }
 
 

@@ -46,6 +46,15 @@
     background-color: var(--main-bg-color);
     box-shadow: 0px 10px 30px rgba(56, 29, 219, 0.2);
     border-radius: 8px;
+
+    outline: 2px solid transparent;
+    transition: outline 0.5s;
+}
+
+.sponsors__btn:hover {
+    outline: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
 }
 
 .sponsors__line {
@@ -53,13 +62,38 @@
     bottom: 520px;
     left: 145px;
     transform: rotate(90deg);
+
+    animation: windmill 1.5s ease-in-out infinite alternate;
 }
+
+@keyframes windmill {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .sponsors__dots {
     position: absolute;
     top: 65px;
     left: 0;
+    animation: hide-dots-left 3s ease-in-out infinite alternate-reverse;    
 }
+
+@keyframes hide-dots-left { 
+    50% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .sponsors__triangle-blue {
     position: absolute;
@@ -71,4 +105,42 @@
     position: absolute;
     bottom: 139px;
     right: 89px;
+}
+
+#triangle-blue {
+    animation: hide 1.5s ease-in-out infinite;
+}
+
+#triangle-rose {
+    animation: hide 1.5s ease-in-out infinite reverse;
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+    25% {
+        transform: scale(0);
+        transform-origin: center;
+    }  
+}
+
+#triagle-big {
+    animation: move 1.5s ease-in-out infinite;
+}
+
+#triagle-small {
+    animation: move 1.5s ease-in-out infinite reverse;
+}
+
+@keyframes move {
+    10% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+    35% {
+        transform: scale(0);
+        transform-origin: center;
+    }  
 }

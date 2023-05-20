@@ -48,7 +48,17 @@
 
     background: #FC5252;
     border-radius: 8px;
+
+    outline: 2px solid transparent;
+    transition: outline 0.5s;
 }
+
+.hero__links-btn:hover {
+    outline: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
+}
+
 
 .hero__links-play {
     display: inline-flex;

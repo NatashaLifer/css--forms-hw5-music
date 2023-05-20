@@ -42,15 +42,26 @@
     background-color: var(--main-bg-color);
     box-shadow: 0px 10px 30px rgba(56, 29, 219, 0.2);
     border-radius: 8px;
+
+    outline: 2px solid transparent;
+
+    transition: outline 0.5s;
+}
+
+.singers-btn:hover {
+    outline: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
+}
+
+.singers-btn:hover::after {
+    content: url(../../img/Arrow_blue.svg);
 }
 
 .singers-btn::after {
-    content: url(../../img/Arrow_music.svg);
-    color: var(--main-color);
-
+    content: url(../../img/Arrow_white.svg);
     position: relative;
     top: 3px;
-
     margin-left: 12px;
 }
 
@@ -86,10 +97,49 @@
     position: absolute;
     left: 93px;
     bottom: 803px;
+
+    animation: leave-comeback 3s ease-out infinite;
+}
+
+@keyframes leave-comeback {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translateX(1000px);
+        opacity: 0; 
+    }
+    80% {
+        transform: translateX(-1000px);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .singers__dots {
     position: absolute;
     top: 104px;
     right: 0;
+
+    animation: hide-dots-right 3s ease-in-out infinite alternate;    
+}
+
+@keyframes hide-dots-right { 
+    50% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
 }

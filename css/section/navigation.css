@@ -20,7 +20,7 @@
 }
 
 .navigation__item:nth-of-type(n+2):nth-of-type(-n+3) .navigation__link::after {
-    content: url(../../img/Arrow.svg);
+    content: url(../../img/arrow-little.svg);
     color: var(--main-color);
 
     position: relative;
@@ -53,6 +53,14 @@
     background: #FFFFFF;
     border-radius: 8px;
 
+    outline: 2px solid transparent;
+    transition: outline 0.5s;
+}
+
+.navigation__btn:hover {
+    outline: 2px solid var(--main-color);
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
 }
 
 
